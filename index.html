@@ -157,22 +157,23 @@
     </section>
  <!--End: Testimonial-->
 
-    <!-- START: Contact Us Section -->
-    <section class="contact-us py-5 bg-light" id="contact">
-      <h2>Hubungi Kami</h2>
-      <div class="contact-container">
-          <form class="contact-form">
-              <input type="text" placeholder="Nama" required>
-              <input type="tel" placeholder="Nomor HP" required>
-              <input type="email" placeholder="Email" required>
-              <textarea placeholder="Pesan" required></textarea>
-              <button type="submit" class="send-button">Kirim</button>
-          </form>
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.738522110113!2d107.60706230000001!3d-6.9218294999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e89dbe0ec231%3A0x177412aac90cd065!2sAlun-Alun%20Bandung!5e0!3m2!1sen!2sid!4v1729085756966!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-      </div>
+  <!-- START: Contact Us Section -->
+<section class="contact-us py-5 bg-light" id="contact">
+    <h2>Hubungi Kami</h2>
+    <div class="contact-container">
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Nama" required>
+            <input type="tel" name="phone" placeholder="Nomor HP" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Pesan" required></textarea>
+            <button type="submit" class="send-button">Kirim</button>
+        </form>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.738522110113!2d107.60706230000001!3d-6.9218294999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e89dbe0ec231%3A0x177412aac90cd065!2sAlun-Alun%20Bandung!5e0!3m2!1sen!2sid!4v1729085756966!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>  
   </section>
+        
   <!-- END: Contact Us Section -->
 
     <!-- START: Footer Section -->

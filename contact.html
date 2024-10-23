@@ -41,19 +41,18 @@
         </nav>    
     </header>
 
-    <!-- Kontak Section -->
-    <section class="contact-us py-5 bg-light" id="contact">
-        <h2>Hubungi Kami</h2>
-        <div class="contact-container">
-            <form class="contact-form">
-                <input type="text" placeholder="Nama" required>
-                <input type="tel" placeholder="Nomor HP" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Pesan" required></textarea>
-                <button type="submit" class="send-button">Kirim</button>
-            </form>
-  
-            <div class="contact-info">
+  <!-- START: Contact Us Section -->
+  <section class="contact-us py-5 bg-light" id="contact">
+    <h2>Hubungi Kami</h2>
+    <div class="contact-container">
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Nama" required>
+            <input type="tel" name="phone" placeholder="Nomor HP" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Pesan" required></textarea>
+            <button type="submit" class="send-button">Kirim</button>
+        </form>
+          <div class="contact-info-lengkap">
                 <h2>Kontak Kami</h2>
                 <p>Alamat: Jl. Asia Afrika, Kb. Pisang, Kec. Regol, Kota Bandung, Jawa Barat</p>
                 <p>Email: <a href="mailto:muhfaj06@gmail.com">muhfaj06@gmail.com</a></p>
@@ -61,6 +60,7 @@
             </div>
     </section>
     <!-- END: Contact Us Section -->
+
       <!-- START: Footer Section -->
       <footer class="bg-dark text-light py-4">
           <div class="container text-center">
