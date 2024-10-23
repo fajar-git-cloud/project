@@ -472,49 +472,55 @@ h2 {
     box-shadow: 0 4px 8px rgba(0,0,0,.1);
 }
 
-
-/*Kontak info lengkap  */
-.contact-info-lengkap {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+.contact-info {
+    background-color: white;
+    padding: 25px; /* Memberi ruang lebih pada padding */
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Membuat bayangan lebih halus */
+    font-family: inherit;
+    color: #333;
 }
 
-.contact-info-lengkap h2 {
-    color: #1a237e;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #3f51b5;
-    padding-bottom: 0.5rem;
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px; /* Perbesar ukuran heading */
+    font-weight: 600; /* Tebalkan sedikit untuk heading */
 }
 
-.contact-info-lengkap p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
+.contact-info p {
+    font-size: 16px; /* Perbesar ukuran teks untuk kenyamanan */
+    color: #555;
+    line-height: 1.8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Tambahkan jarak antar baris */
 }
 
-.contact-info-lengkap a {
-    color: #3f51b5;
+.contact-info a {
+    color: #007BFF;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 16px; /* Sesuaikan ukuran font link */
 }
 
-.contact-info-lengkap a:hover {
-    color: #1a237e;
-    text-decoration: underline;
+.contact-info i {
+    margin-right: 12px; /* Memberi sedikit jarak antara ikon dan teks */
+    color: #007BFF;
+    font-size: 18px; /* Ukuran ikon sedikit diperbesar agar proporsional */
 }
 
-@media (max-width: 768px) {
-    .contact-info {
-        padding: 1.5rem;
-    }
-
-    .contact-info-lengkap h2 {
-        font-size: 1.5rem;
-    }
+.contact-info i.fa-map-marker-alt {
+    color: red;
 }
+
+.contact-info i.fa-envelope {
+    color: #007BFF;
+}
+
+.contact-info i.fa-phone-alt {
+    color: green;
+}
+
 
 /* Footer Styles */
 footer {
@@ -583,6 +589,7 @@ footer {
     animation: pulse 1s infinite;
 }
 
+
 /* Footer */
 footer {
     background-color: #007BFF;
@@ -593,3 +600,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+

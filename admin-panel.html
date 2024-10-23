@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Project Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="loginForm">
+            <h2 class="mb-4">Admin Login</h2>
+            <form id="adminLoginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+
+        <div id="adminContent" style="display: none;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Project Solutions Admin</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#services">Layanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#testimonials">Testimonial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#about">Tentang Kami</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="logoutButton">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="services">
+                    <h2>Kelola Layanan</h2>
+                    <form id="serviceForm" class="mb-4">
+                        <input type="hidden" id="serviceId">
+                        <div class="mb-3">
+                            <label for="serviceTitle" class="form-label">Judul Layanan</label>
+                            <input type="text" class="form-control" id="serviceTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceDescription" class="form-label">Deskripsi</label>
+                            <textarea class="form-control" id="serviceDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceImage" class="form-label">URL Gambar</label>
+                            <input type="text" class="form-control" id="serviceImage" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Layanan</button>
+                    </form>
+                    <table class="table" id="servicesTable">
+                        <thead>
+                            <tr>
+                                <th>Judul</th>
+                                <th>Deskripsi</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="testimonials">
+                    <h2>Kelola Testimonial</h2>
+                    <form id="testimonialForm" class="mb-4">
+                        <input type="hidden" id="testimonialId">
+                        <div class="mb-3">
+                            <label for="testimonialName" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="testimonialName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="testimonialContent" class="form-label">Testimonial</label>
+                            <textarea class="form-control" id="testimonialContent" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="testimonialImage" class="form-label">URL Gambar</label>
+                            <input type="text" class="form-control" id="testimonialImage" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Testimonial</button>
+                    </form>
+                    <table class="table" id="testimonialsTable">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Testimonial</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="about">
+                    <h2>Edit Tentang Kami</h2>
+                    <form id="aboutForm" class="mb-4">
+                        <div class="mb-3">
+                            <label for="aboutContent" class="form-label">Konten Tentang Kami</label>
+                            <textarea class="form-control" id="aboutContent" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin-panel.js"></script>
+</body>
+</html>
